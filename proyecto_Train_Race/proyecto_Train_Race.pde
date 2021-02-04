@@ -28,13 +28,19 @@ void setup(){
 // Termina la función setup.
 
 void draw() {
-  background(45);
-  if (gameOver == true){
+  background(35);
+  if (gameOver == false){
     // Texto de iniciar
   }
   else{
   stroke(50);
-  for (int  0; i < filas, i++){
+  for (int i= 0; i < filas; i++){
+    
+    line(0,i*bits,width, i*bits);
+  }
+  for (int j= 0; j < filas; j++){
+    
+    line(j*bits,0,j*bits , width);
   }
   
 }
