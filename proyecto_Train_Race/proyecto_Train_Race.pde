@@ -1,3 +1,4 @@
+PImage[] img = new PImage[0];
 int filas = 50;
 int columnas = 50;
 int bits = 20;
@@ -23,7 +24,7 @@ void setup(){
   posY.add (15);
   appleX = (int)random(0, 50); // Posición de las manzanas aleatoria en X e Y
   appleY = (int)random(0, 50);
-
+  img[0] = loadImage("imagens/t0.png");
 }
 // Termina la función setup.
 
@@ -31,6 +32,7 @@ void draw() {
   background(35);
   if (gameOver == false){
     // Texto de iniciar
+    image(img[0], 0,0);
   }
   else{
   stroke(50);
@@ -44,4 +46,6 @@ void draw() {
   }
   
 }
+
+
 }
