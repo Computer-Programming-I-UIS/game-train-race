@@ -1,4 +1,4 @@
-PImage[] img = new PImage[0];
+PImage img ;
 int filas = 50;
 int columnas = 50;
 int bits = 20;
@@ -14,25 +14,27 @@ int bits = 20;
     int appleY;
 
 
-      boolean gameOver = true;
+      boolean gameOver = false;
 
 // Declaración de todas las variables globales del juego 
 
 void setup(){
-  size(1000, 1000); // Tamaño de la pantalla
+  size(850, 700); // Tamaño de la pantalla
   posX.add (15); // posición en la que va a iniciar en Xe Y
   posY.add (15);
   appleX = (int)random(0, 50); // Posición de las manzanas aleatoria en X e Y
   appleY = (int)random(0, 50);
-  img[0] = loadImage("imagens/t0.png");
+  img = loadImage("t0.png");
+  img.resize(85, 85);
 }
 // Termina la función setup.
 
 void draw() {
-  background(35);
-  if (gameOver == false){
+  background(25);
+  
+  if (gameOver == true){
     // Texto de iniciar
-    image(img[0], 0,0);
+    
   }
   else{
   stroke(50);
@@ -40,12 +42,28 @@ void draw() {
     
     line(0,i*bits,width, i*bits);
   }
-  for (int j= 0; j < filas; j++){
+  for (int j= 0; j < columnas; j++){
     
-    line(j*bits,0,j*bits , width);
+    line(j*bits,0,j*bits , height);
   }
-  
+    
 }
 
+  drawApple();
+  drawTrain();
+}
+    
+void drawApple(){
+  fill(215, 0 , 75);
+  rect(appleX * bits, appleY * bits, bits, bits);
+}
+void drawTrain(){
+  for (int i= 0; i < posX.size(); i++){
+  image(img, width/2,height/2);
+  }
+}
 
+void moove(){
+  posX.add(0, posX.get(0)+dx[dire]);
+  posY.add(0, posY.get(0)+dy[dire]);
 }
