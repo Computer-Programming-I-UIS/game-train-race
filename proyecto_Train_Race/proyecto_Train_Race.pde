@@ -1,3 +1,7 @@
+import ddf.minim.*;
+Minim minim;
+AudioPlayer player;
+
 
 int filas = 30;
 int columnas = 30;
@@ -20,6 +24,8 @@ int bits = 30;
 // Declaración de todas las variables globales del juego 
 
 void setup(){
+  minim = new Minim(this);
+  player = minim.loadFile("audio.mp3");
   size(800, 800); // Tamaño de la pantalla
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);

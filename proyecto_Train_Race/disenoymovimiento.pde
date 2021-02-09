@@ -34,19 +34,22 @@
  void drawTrain(){
     fill(#08356F);
       for (int i = 0; i< posX.size(); i ++){
-         rect(posX.get(i)*bits, posY.get(i)*bits, bits+30, bits+10);
+         rect(posX.get(i)*bits, posY.get(i)*bits, bits+50, bits+10);
   
   
   fill(#9D116A );
-         rect ( posX.get(i)*bits-5, posY.get(i)*bits, 25, 10,10);
-         rect ( posX.get(i)*bits+44, posY.get(i)*bits, 25, 10,10);
-         rect ( posX.get(i)*bits+44, posY.get(i)*bits+40, 25, 10,10);
-         rect ( posX.get(i)*bits-5, posY.get(i)*bits+40, 25, 10,10);
+         rect ( posX.get(i)*bits-5, posY.get(i)*bits-5, 25, 10);
+         rect ( posX.get(i)*bits+60, posY.get(i)*bits-5, 25, 10);
+         rect ( posX.get(i)*bits+60, posY.get(i)*bits+40, 25, 10);
+         rect ( posX.get(i)*bits-5, posY.get(i)*bits+40, 25, 10);
          fill(100,200);
-         rect ( posX.get(i)*bits+23, posY.get(i)*bits+5, 20, 30);
+         rect ( posX.get(i)*bits+18, posY.get(i)*bits+5, 20, 30);
+         fill(#C11F06);
+         rect ( posX.get(i)*bits+58, posY.get(i)*bits+8, 10, 10);
+         rect ( posX.get(i)*bits+58, posY.get(i)*bits+25, 10, 10);
          fill(random(0,256));
-         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+15, 10, 12);
-         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+32, 10, 12);
+         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+14, 10, 12);
+         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+30, 10, 12);
     
 }
  }
