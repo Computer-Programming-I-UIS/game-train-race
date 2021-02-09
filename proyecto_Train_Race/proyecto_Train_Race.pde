@@ -1,12 +1,9 @@
-PImage img ;
-int filas = 50;
-int columnas = 50;
-int bits = 20;
-float xpos,ypos;
-  Boolean d = true;
-  Boolean w= false;
-  Boolean s= true;
 
+int filas = 30;
+int columnas = 30;
+int bits = 30;
+
+ 
   ArrayList<Integer> posX = new ArrayList<Integer> ();
   ArrayList<Integer> posY = new ArrayList<Integer> ();
   
@@ -26,10 +23,10 @@ void setup(){
   size(800, 800); // Tamaño de la pantalla
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
-  appleX = (int)random(0, 40); // Posición de las manzanas aleatoria en X e Y
-  appleY = (int)random(0, 40);
-   img = loadImage("t0.png");
-  img.resize(85, 85);
+  frameRate(8);
+  appleX = (int)random(0, 25); // Posición de las manzanas aleatoria en X e Y
+  appleY = (int)random(0, 25);
+
 }
 // Termina la función setup.
 
@@ -52,9 +49,10 @@ void draw() {
   }
     
 }
-      drawApple();
-      drawTrain();
       moove();
+      comer();
+      drawTrain();
+      drawApple();
       keyPressed();
       
 }
