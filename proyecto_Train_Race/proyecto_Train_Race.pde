@@ -34,7 +34,15 @@ void draw() {
   background(25);
   
   if (gameOver == true){
-    // Texto de iniciar
+    fill(195);
+    textSize(20);
+    text("Press space for PLAY AGAIN", 500, height/2);
+    appleX= -2;
+    appleY = -2;
+    posX.clear ();
+    posY.clear();
+    posX.add(-10);
+    posY.add(-10);
     
   }
   else{
@@ -51,6 +59,8 @@ void draw() {
 }
       moove();
       comer();
+      bordes();
+      cuerpo();
       drawTrain();
       drawApple();
       keyPressed();

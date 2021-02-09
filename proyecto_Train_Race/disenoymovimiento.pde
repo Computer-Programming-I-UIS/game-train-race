@@ -6,29 +6,38 @@
      posY.remove(posY.size()-1);
    
    }
+   
+   void bordes(){
+     
+     if ((posX.get(0) < 0) || ( posX.get(0) > columnas -1) || (posY.get(0) < 0) || ( posY.get(0) > filas-1)){
+         
+          gameOver = true ; 
+     }
+     
+   }
+   
+   void cuerpo(){
+     
+     for (int i = 2; i < posX.size(); i++){
+       for (int j = 2; j < posY.size(); j++){
+        if ((posX.get(0) == posX.get(i)) && (posY.get(0) == posY.get(j))){
+           
+          gameOver = true;
+         
+         }  
+         
+     
+     }
+     }
+   }
+   
  void drawTrain(){
-    fill(#241D50);
+    fill(#08356F);
       for (int i = 0; i< posX.size(); i ++){
          rect(posX.get(i)*bits, posY.get(i)*bits, bits+30, bits+10);
-         /*
-      
-         
-    
-         // Diseño del chásis y luces 
-         fill(50);
-         rect ( posX.get(i)+60, posY.get(i)+5, 20, 38,3);
-         fill(#DBFA14);
-         ellipse( posX.get(i)+68, posY.get(i)+15, 15, 15);
-         ellipse( posX.get(i)+68, posY.get(i)+35, 15, 15);
-         fill(120);
-         stroke(6);
-         line(posX.get(i)+56, posY.get(i)+3,posX.get(i)+10, posY.get(i)+25);
-      
-         line(posX.get(i)+56, posY.get(i)+43,posX.get(i)+10, posY.get(i)+25);
-         */
   
   
-  fill(#0B425F );
+  fill(#9D116A );
          rect ( posX.get(i)*bits-5, posY.get(i)*bits, 25, 10,10);
          rect ( posX.get(i)*bits+44, posY.get(i)*bits, 25, 10,10);
          rect ( posX.get(i)*bits+44, posY.get(i)*bits+40, 25, 10,10);
@@ -56,12 +65,25 @@
     rect(appleX * bits, appleY * bits, 50+bits, 10+bits);
 }
 
-
+  void restaurar(){
+    
+    gameOver = false;
+    posX.clear();
+    posY.clear();
+    posX.add(10);
+    posY.add(10);
+    appleX = (int)random(0, 25); 
+    appleY = (int)random(0, 25);
+    
+    
+  }
 
  void keyPressed(){
      if (key == 'w' ||keyCode == UP) dire = 0;
      if (key == 's' ||keyCode == DOWN) dire = 1;
      if (key == 'a' ||keyCode == LEFT) dire = 2;
      if (key == 'd' ||keyCode == RIGHT) dire = 3;
-     
+     if ( key == ' '){
+       restaurar();
+     }  
    }
