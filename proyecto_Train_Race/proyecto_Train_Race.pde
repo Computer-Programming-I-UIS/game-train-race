@@ -2,11 +2,11 @@ import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 
-
+PFont font;
 int filas = 30;
 int columnas = 30;
 int bits = 30;
-
+int points = 0;
  
   ArrayList<Integer> posX = new ArrayList<Integer> ();
   ArrayList<Integer> posY = new ArrayList<Integer> ();
@@ -26,7 +26,9 @@ int bits = 30;
 void setup(){
   minim = new Minim(this);
   player = minim.loadFile("audio.mp3");
-  size(800, 800); // Tamaño de la pantalla
+  size(800, 1000); // Tamaño de la pantalla
+  font = loadFont("Cambria-Italic-48.vlw");
+  textFont(font);
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
   frameRate(8);
@@ -38,6 +40,8 @@ void setup(){
 
 void draw() {
   background(25);
+  textSize(30);
+  text("Points: ", 30, 30);
   
   if (gameOver == true){
     fill(195);
