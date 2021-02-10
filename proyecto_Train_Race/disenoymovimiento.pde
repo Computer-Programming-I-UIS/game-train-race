@@ -59,6 +59,7 @@
              appleY = (int)random(0, 25);
              posX.add(posX.get(posX.size()-1));
              posY.add(posY.get(posY.size()-1));
+             points = points + 10;
    }
    
    }

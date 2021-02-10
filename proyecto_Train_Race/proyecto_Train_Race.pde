@@ -41,7 +41,7 @@ void setup(){
 void draw() {
   background(25);
   textSize(30);
-  text("Points: ", 30, 30);
+  text("Score: " + points, 30, 30, 1);
   
   if (gameOver == true){
     fill(195);
