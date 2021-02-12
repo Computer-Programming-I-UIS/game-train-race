@@ -42,7 +42,6 @@ void draw() {
   ellipseMode(CORNER);
   textSize(30);
   text("Score: " + points, 30, 30, 1);
-  
   if (gameOver == true){
     fill(195);
     textSize(25);
@@ -53,26 +52,24 @@ void draw() {
     posY.clear();
     posX.add(-10);
     posY.add(-10); 
-  }
+   }
   else{
-  stroke(50);
-  for (int i= 0; i < filas; i++){
-    
+   stroke(50);
+    for (int i= 0; i < filas; i++){    
     line(0,i*bits,width, i*bits);
-  }
-  for (int j= 0; j < columnas; j++){
-    
+     }
+    for (int j= 0; j < columnas; j++){ 
     line(j*bits,0,j*bits , height);
-  }
+     }
     
-}
-      moove();
-      comer();
-      bordes();
-      cuerpo();
-      drawTrain();
-      drawApple();
-      keyPressed();
+   }
+     moove();
+     comer();
+     bordes();
+     cuerpo();
+     drawTrain();
+     drawApple();
+     keyPressed();
       
 }
-    
+//termina la funcion draw  

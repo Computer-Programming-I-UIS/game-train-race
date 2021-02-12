@@ -1,20 +1,18 @@
    void moove(){
-   
      posX.add(0,posX.get(0) +dx[dire]);
      posY.add(0,posY.get(0) +dy[dire]);
      posX.remove(posX.size()-1);
      posY.remove(posY.size()-1);
    
-   }
+    }
    
    void bordes(){
      
-     if ((posX.get(0) < 0) || ( posX.get(0) > columnas -1) || (posY.get(0) < 0) || ( posY.get(0) > filas-1)){
-         
+     if ((posX.get(0) < 0) || ( posX.get(0) > columnas -1) || (posY.get(0) < 0) || ( posY.get(0) > filas-1)){         
           gameOver = true ; 
-     }
+      }
      
-   }
+    }
    
    void cuerpo(){
      
@@ -25,9 +23,10 @@
          }  
         }
       }
-   }
+      
+    }
    
- void drawTrain(){
+   void drawTrain(){
       for (int i = 0; i< posX.size(); i ++){
     fill(random(50, 200));    
          ellipse(posX.get(i)*bits, posY.get(i)*bits, 33, 33);
@@ -44,21 +43,22 @@
          ellipse(posX.get(i)*bits, posY.get(i)*bits+(25/2), 8, 8);
          ellipse(posX.get(i)*bits+24, posY.get(i)*bits+(25/2), 8, 8);
     
-}
- }
-      void comer(){
+        }
+        
+    }
+ 
+   void comer(){
          if(( posX.get(0) == appleX) && ( posY.get(0) == appleY)){
              appleX = (int)random(0, 25); 
              appleY = (int)random(0, 20);
              posX.add(posX.get(posX.size()-1));
              posY.add(posY.get(posY.size()-1));
-             points = points+10;
-            
-        }
+             points = points+10;        
+          }
    
-   }
+    }
    
- void drawApple(){
+   void drawApple(){
     fill(76, 252 , 86);
     ellipse(appleX*bits, appleY*bits, 28, 32);
     fill(0);
@@ -66,9 +66,9 @@
     fill(255);
     ellipse(appleX*bits+6, appleY*bits+6, 6, 12);
     ellipse(appleX*bits+17, appleY*bits+6, 6, 12);
-}
+    }
 
-  void restaurar(){
+   void restaurar(){
     gameOver = false;
     posX.clear();
     posY.clear();
@@ -78,9 +78,9 @@
     appleY = (int)random(0, 25);
     points = 0;
     
-  }
+    }
 
- void keyPressed(){
+   void keyPressed(){
      if (key == 'w' ||keyCode == UP) dire = 0;
      if (key == 's' ||keyCode == DOWN) dire = 1;
      if (key == 'a' ||keyCode == LEFT) dire = 2;
@@ -88,4 +88,4 @@
       if ( key == ' '){
        restaurar();
       }  
-   }
+    }
