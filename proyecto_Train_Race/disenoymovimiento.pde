@@ -20,19 +20,14 @@
      
      for (int i = 2; i < posX.size(); i++){
        for (int j = 2; j < posY.size(); j++){
-        if ((posX.get(0) == posX.get(i)) && (posY.get(0) == posY.get(j))){
-           
+        if ((posX.get(0) == posX.get(i)) && (posY.get(0) == posY.get(j))){ 
           gameOver = true;
-         
          }  
-         
-     
-     }
-     }
+        }
+      }
    }
    
  void drawTrain(){
-    fill(#08356F);
       for (int i = 0; i< posX.size(); i ++){
     fill(random(50, 200));    
          ellipse(posX.get(i)*bits, posY.get(i)*bits, 33, 33);
@@ -54,7 +49,7 @@
       void comer(){
          if(( posX.get(0) == appleX) && ( posY.get(0) == appleY)){
              appleX = (int)random(0, 25); 
-             appleY = (int)random(0, 25);
+             appleY = (int)random(0, 20);
              posX.add(posX.get(posX.size()-1));
              posY.add(posY.get(posY.size()-1));
              points = points+10;
@@ -64,7 +59,6 @@
    }
    
  void drawApple(){
-    
     fill(76, 252 , 86);
     ellipse(appleX*bits, appleY*bits, 28, 32);
     fill(0);
@@ -75,7 +69,6 @@
 }
 
   void restaurar(){
-    
     gameOver = false;
     posX.clear();
     posY.clear();
@@ -85,7 +78,6 @@
     appleY = (int)random(0, 25);
     points = 0;
     
-    
   }
 
  void keyPressed(){
@@ -93,7 +85,7 @@
      if (key == 's' ||keyCode == DOWN) dire = 1;
      if (key == 'a' ||keyCode == LEFT) dire = 2;
      if (key == 'd' ||keyCode == RIGHT) dire = 3;
-     if ( key == ' '){
+      if ( key == ' '){
        restaurar();
-     }  
+      }  
    }
