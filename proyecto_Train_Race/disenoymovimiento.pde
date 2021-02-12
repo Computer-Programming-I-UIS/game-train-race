@@ -34,22 +34,20 @@
  void drawTrain(){
     fill(#08356F);
       for (int i = 0; i< posX.size(); i ++){
-         rect(posX.get(i)*bits, posY.get(i)*bits, bits+50, bits+10);
-  
-  
-  fill(#9D116A );
-         rect ( posX.get(i)*bits-5, posY.get(i)*bits-5, 25, 10);
-         rect ( posX.get(i)*bits+60, posY.get(i)*bits-5, 25, 10);
-         rect ( posX.get(i)*bits+60, posY.get(i)*bits+40, 25, 10);
-         rect ( posX.get(i)*bits-5, posY.get(i)*bits+40, 25, 10);
-         fill(100,200);
-         rect ( posX.get(i)*bits+18, posY.get(i)*bits+5, 20, 30);
-         fill(#C11F06);
-         rect ( posX.get(i)*bits+58, posY.get(i)*bits+8, 10, 10);
-         rect ( posX.get(i)*bits+58, posY.get(i)*bits+25, 10, 10);
-         fill(random(0,256));
-         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+14, 10, 12);
-         ellipse( posX.get(i)*bits+30, posY.get(i)*bits+30, 10, 12);
+    fill(random(50, 200));    
+         ellipse(posX.get(i)*bits, posY.get(i)*bits, 33, 33);
+    fill(237, 247, 240);
+         ellipse(posX.get(i)*bits+(33/4), posY.get(i)*bits+(33/4), 16, 16);
+    fill (random(50, 255), 0,random(50, 255));
+         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+4, 8, 8);
+         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+22, 8, 8);
+         ellipse(posX.get(i)*bits+22, posY.get(i)*bits+4, 8, 8);
+         ellipse(posX.get(i)*bits+22, posY.get(i)*bits+22, 8, 8);
+    fill (0,random(50, 255), random(50, 255));
+         ellipse(posX.get(i)*bits+(25/2), posY.get(i)*bits, 8, 8);
+         ellipse(posX.get(i)*bits+(25/2), posY.get(i)*bits+24, 8, 8);
+         ellipse(posX.get(i)*bits, posY.get(i)*bits+(25/2), 8, 8);
+         ellipse(posX.get(i)*bits+24, posY.get(i)*bits+(25/2), 8, 8);
     
 }
  }
@@ -59,14 +57,21 @@
              appleY = (int)random(0, 25);
              posX.add(posX.get(posX.size()-1));
              posY.add(posY.get(posY.size()-1));
-             points = points + 10;
-   }
+             points = points+10;
+            
+        }
    
    }
    
  void drawApple(){
-    fill(215, 180 , 75);
-    rect(appleX * bits, appleY * bits, 50+bits, 10+bits);
+    
+    fill(76, 252 , 86);
+    ellipse(appleX*bits, appleY*bits, 28, 32);
+    fill(0);
+    ellipse(appleX*bits+9, appleY*bits+24, 10, 3);
+    fill(255);
+    ellipse(appleX*bits+6, appleY*bits+6, 6, 12);
+    ellipse(appleX*bits+17, appleY*bits+6, 6, 12);
 }
 
   void restaurar(){
@@ -78,6 +83,7 @@
     posY.add(10);
     appleX = (int)random(0, 25); 
     appleY = (int)random(0, 25);
+    points = 0;
     
     
   }

@@ -2,7 +2,7 @@ import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 
-PFont font;
+PFont font;    //variable para añadir fuente
 int filas = 30;
 int columnas = 30;
 int bits = 30;
@@ -27,8 +27,8 @@ void setup(){
   minim = new Minim(this);
   player = minim.loadFile("audio.mp3");
   size(800, 1000); // Tamaño de la pantalla
-  font = loadFont("Cambria-Italic-48.vlw");
-  textFont(font);
+  font = loadFont("Cambria-Italic-48.vlw");  //cargamos la fuente a la variable
+  textFont(font);  //definimos la fuente a usar
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
   frameRate(8);
@@ -40,19 +40,21 @@ void setup(){
 
 void draw() {
   background(25);
+  ellipseMode(CORNER);
   textSize(30);
   text("Score: " + points, 30, 30, 1);
   
   if (gameOver == true){
     fill(195);
     textSize(20);
-    text("Press space for PLAY AGAIN", 500, height/2);
+    text("Press space for PLAY AGAIN", 400, height/2);
     appleX= -2;
     appleY = -2;
-    posX.clear ();
+    posX.clear();
     posY.clear();
     posX.add(-10);
     posY.add(-10);
+    
     
   }
   else{
