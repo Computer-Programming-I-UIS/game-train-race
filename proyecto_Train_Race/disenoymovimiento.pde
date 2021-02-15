@@ -87,5 +87,8 @@
      if (key == 'd' ||keyCode == RIGHT) dire = 3;
       if ( key == ' '){
        restaurar();
+      } 
+      if ( key == 'p'||key == 'P'){
+        stage = 3;
       }  
     }
