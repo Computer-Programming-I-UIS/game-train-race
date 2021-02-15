@@ -1,10 +1,10 @@
-import ddf.minim.*;
+import processing.sound.*;
 
-AudioPlayer player;
-PImage startimage;
+SoundFile misonido;
+PImage startimage, startimage1;
 PFont font;    //variable para añadir fuente
 int  stage = 0;
-int filas = 40; //30 visibles
+int filas = 35; //30 visibles
 int columnas = 40; //22.5 visibles
 int bits = 30;
 int points = 0; //variable de puntos
@@ -12,9 +12,9 @@ PImage title;
 
 
 
-botones play = new botones(720-50,50,1); //Boton que reinicia las barras
-botones exit = new botones(720-150,50,2); //Boton que une las lineas las barras con lineas
-botones continuar = new botones(720-250,50,3); //Boton que une las lineas las barras con lineas
+botones play = new botones(800,50,1); //Boton que reinicia las barras
+botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
+botones continuar = new botones(750,900,3); //Boton que une las lineas las barras con lineas
 
 
 ArrayList<Integer> posX = new ArrayList<Integer> ();
@@ -35,6 +35,8 @@ void setup() {
 
   size(900, 1000); // Tamaño de la pantalla
   startimage= loadImage("juego alien.jpg");
+  startimage1= loadImage("loser.jpg");
+  misonido = new SoundFile(this,"final1.mp3");
 
   /*title = createFont( "font", 900,true);
    
@@ -55,24 +57,33 @@ void draw() {
 
   switch(stage) {
   case 0 : 
+     misonido.play();
     image(startimage, 0, 0, bits*40, height);
      textAlign(CENTER);
-     text("ALIENCE RACE",500,400);
-     text("",500,420);
+     textSize(70);
+     fill (int(random(50,200)));
+     stroke(25);
+     text("ALIEN RACE",350,height/3.5);
+     textSize(25);
+     fill (int(random(200,226)));
+     stroke(18);
+     fill (int(random(0,40)));
+     text("PRESS PLAY FOR THE START THE GAME",350,400);
      play.display();  // Muestra y Verifica si se esta presionando el boton de restet
      exit.display(); 
      
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse 
    
     if(play.ejecutar()){       //Si hace click en reset 
+            
             stage = 1;
+            
     }
     if(exit.ejecutar()){       //Si hace click en reset 
             exit();
+            
     }
-    
-    
-    
+
      }
     break;
     case 1:
@@ -87,14 +98,16 @@ void draw() {
    
     break;
   case 2 : 
+    
     background(25);
     ellipseMode(CORNER);
     textSize(30);
-    text("Score: " + points, 30, 30, 1);
+    text("Score: " + points, 80, 30, 1);
     if (gameOver == true) {
-      fill(195);
+      image(startimage1, 0, 0, bits*30, height);
+      fill(#F5330C);
       textSize(25);
-      text("Press space for PLAY AGAIN", 400, height/2);
+      text("Press space for PLAY AGAIN", random(500,800), random(800,1000));
       appleX= -2;
       appleY = -2;
       posX.clear();
