@@ -1,6 +1,7 @@
-import processing.sound.*;
+//import processing.sound.*;
 
-SoundFile misonido;
+//SoundFile misonido;
+
 PImage startimage, startimage1;
 PFont font;    //variable para añadir fuente
 int  stage = 0;
@@ -8,13 +9,11 @@ int filas = 35; //30 visibles
 int columnas = 40; //22.5 visibles
 int bits = 30;
 int points = 0; //variable de puntos
-PImage title;
+//PImage title;
 
-
-
-botones play = new botones(800,50,1); //Boton que reinicia las barras
-botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
-botones continuar = new botones(750,900,3); //Boton que une las lineas las barras con lineas
+botones play = new botones(800,50,1); //Boton que comience el juego
+botones exit = new botones(800,150,2); //Boton que lo saca del juego 
+botones continuar = new botones(750,100,3); //Boton que sigue las interfaces
 
 
 ArrayList<Integer> posX = new ArrayList<Integer> ();
@@ -36,7 +35,7 @@ void setup() {
   size(900, 1000); // Tamaño de la pantalla
   startimage= loadImage("juego alien.jpg");
   startimage1= loadImage("loser.jpg");
-  misonido = new SoundFile(this,"final1.mp3");
+  //misonido = new SoundFile(this,"final1.mp3");
 
   /*title = createFont( "font", 900,true);
    
@@ -57,7 +56,7 @@ void draw() {
 
   switch(stage) {
   case 0 : 
-     misonido.play();
+    //misonido.play();
     image(startimage, 0, 0, bits*40, height);
      textAlign(CENTER);
      textSize(70);
