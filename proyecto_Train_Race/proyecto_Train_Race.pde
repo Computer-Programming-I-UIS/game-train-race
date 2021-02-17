@@ -7,6 +7,7 @@ Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
+AudioPlayer player1;
 
 PImage startimage, startimage1, startimage2;
 PFont font;    //variable para añadir fuente
@@ -48,6 +49,7 @@ void setup() {
   startimage2= loadImage("continue.PNG");
   minim = new Minim(this);
   player = minim.loadFile("final.wav");
+  player1 = minim.loadFile("intro.wav");
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
   frameRate(8);
@@ -63,7 +65,7 @@ void draw() {
   case 0 : 
     
     image(startimage, 0, 0, screenWidth, screenHeight);
-
+     player1.play(); 
      textAlign(CENTER);
      textSize(70);
      fill (int(random(50,200)));
