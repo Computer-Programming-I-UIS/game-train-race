@@ -19,7 +19,7 @@ int points = 0; //variable de puntos
 
 botones play = new botones(800,50,1); //Boton que reinicia las barras
 botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
-botones continuar = new botones(750,200,3); //Boton que une las lineas las barras con lineas
+botones continuar = new botones(500,500,3); //Boton que une las lineas las barras con lineas
 
 
 
@@ -76,7 +76,7 @@ void draw() {
      text("PRESS PLAY FOR THE START THE GAME",350,400);
      play.display();  // Muestra y Verifica si se esta presionando el boton de restet
      exit.display(); 
-     player.play();
+     
      
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse 
    
@@ -115,12 +115,14 @@ void draw() {
       fill(#F5330C);
       textSize(30);
       text("Press space for PLAY AGAIN", random(500,800), random(800,1000));
+     
       appleX= -2;
       appleY = -2;
       posX.clear();
       posY.clear();
       posX.add(-10);
       posY.add(-10);
+      player.play();
     } else {
       stroke(50);
       for (int i= 0; i < filas; i++) {    
@@ -137,6 +139,7 @@ void draw() {
     drawTrain();
     drawApple();
     keyPressed();
+    
     break;
     case 3:
     

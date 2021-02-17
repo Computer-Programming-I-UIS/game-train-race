@@ -28,7 +28,8 @@ class botones{ //crea los botones
       text("Exit",x,y);
       break;
       case 3:
-    
+      fill(#D3C011);
+      stroke(15);
        text("Continue",x,y);
       
     }

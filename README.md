@@ -39,6 +39,7 @@ y aquí tenemos una breve imágen de lo que es el juego
 y por último estará el game over que  va aparecer al perder
 
 
-![](https://lh3.googleusercontent.com/1rBWYbBhQWe4X1bZuWoAFCpEwteUgM7OSJ8e0k5eB-Pw7ed8K6mkYBHuIsR-6F0_1u7u6g=s500)
+![](https://lh3.googleusercontent.com/7iBw5h73dGTvV2c5WaP1ITGZGHYAjFMDM9uSzjakxmOgza7-ax48UG5b4qaSYGyJlAn53g=s500)
 
-
+## Créditos :
+Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
