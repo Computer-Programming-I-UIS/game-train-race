@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Autores: Harvey Carreño - 2192281
             Kenneth Rincón- 2192287
    Juego: Alien Race
@@ -8,19 +9,30 @@ Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos
 //import processing.sound.*;
 //SoundFile misonido;
 PImage startimage, startimage1, startimage2;
+=======
+//import processing.sound.*;
+
+//SoundFile misonido;
+
+PImage startimage, startimage1;
+>>>>>>> cde9816c038313fa5c526c8ee20922e30a7f5514
 PFont font;    //variable para añadir fuente
 int  stage = 0;
 int filas = 35; //30 visibles
 int columnas = 40; //22.5 visibles
 int bits = 30;
 int points = 0; //variable de puntos
-PImage title;
+//PImage title;
 
-
-
+<<<<<<< HEAD
 botones play = new botones(800,50,1); //Boton que reinicia las barras
 botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
 botones continuar = new botones(750,200,3); //Boton que une las lineas las barras con lineas
+=======
+botones play = new botones(800,50,1); //Boton que comience el juego
+botones exit = new botones(800,150,2); //Boton que lo saca del juego 
+botones continuar = new botones(750,100,3); //Boton que sigue las interfaces
+>>>>>>> cde9816c038313fa5c526c8ee20922e30a7f5514
 
 
 ArrayList<Integer> posX = new ArrayList<Integer> ();
@@ -45,8 +57,12 @@ void setup() {
   size(900, 1000); // Tamaño de la pantalla
   startimage= loadImage("juego alien.jpg");
   startimage1= loadImage("loser.jpg");
+<<<<<<< HEAD
   startimage2= loadImage("continue.PNG");
  // misonido = new SoundFile(this,"final1.mp3");
+=======
+  //misonido = new SoundFile(this,"final1.mp3");
+>>>>>>> cde9816c038313fa5c526c8ee20922e30a7f5514
 
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
@@ -61,8 +77,13 @@ void draw() {
 
   switch(stage) {
   case 0 : 
+<<<<<<< HEAD
     // misonido.play();
     image(startimage, 0, 0, screenWidth, screenHeight);
+=======
+    //misonido.play();
+    image(startimage, 0, 0, bits*40, height);
+>>>>>>> cde9816c038313fa5c526c8ee20922e30a7f5514
      textAlign(CENTER);
      textSize(70);
      fill (int(random(50,200)));
