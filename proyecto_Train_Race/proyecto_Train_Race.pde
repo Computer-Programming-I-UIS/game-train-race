@@ -81,7 +81,7 @@ void draw() {
      text("ALIEN RACE",350,height/3.5);
      textSize(25);
      fill (int(random(200,226)));
-     stroke(18);
+     stroke(20);
      fill (int(random(0,40)));
      text("PRESS PLAY FOR THE START THE GAME",350,400);
      play.display();  // Muestra y Verifica si se esta presionando el boton de restet

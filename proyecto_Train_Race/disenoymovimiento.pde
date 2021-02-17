@@ -59,7 +59,7 @@
     }
    
    void drawApple(){
-    fill(76, 252 , 86);
+    fill(75, 252 , 86);
     ellipse(appleX*bits, appleY*bits, 28, 32);
     fill(0);
     ellipse(appleX*bits+9, appleY*bits+24, 10, 3);
