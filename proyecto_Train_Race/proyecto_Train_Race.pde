@@ -4,15 +4,11 @@
    Descripción: Basado en el clásico juego de snake este código construye una versión  graficamente diferente y con algunas características extras. 
 Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
 */
+import ddf.minim.*;
+Minim minim;
+AudioPlayer player;
 
-//import processing.sound.*;
-//SoundFile misonido;
 PImage startimage, startimage1, startimage2;
-//import processing.sound.*;
-
-//SoundFile misonido;
-
-
 PFont font;    //variable para añadir fuente
 int  stage = 0;
 int filas = 35; //30 visibles
@@ -49,13 +45,9 @@ void setup() {
   size(900, 1000); // Tamaño de la pantalla
   startimage= loadImage("juego alien.jpg");
   startimage1= loadImage("loser.jpg");
-
   startimage2= loadImage("continue.PNG");
- // misonido = new SoundFile(this,"final1.mp3");
-
-  //misonido = new SoundFile(this,"final1.mp3");
-
-
+  minim = new Minim(this);
+  player = minim.loadFile("final.wav");
   posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
   frameRate(8);
@@ -69,10 +61,8 @@ void draw() {
 
   switch(stage) {
   case 0 : 
-
-    // misonido.play();
+    
     image(startimage, 0, 0, screenWidth, screenHeight);
-
 
      textAlign(CENTER);
      textSize(70);
@@ -86,6 +76,7 @@ void draw() {
      text("PRESS PLAY FOR THE START THE GAME",350,400);
      play.display();  // Muestra y Verifica si se esta presionando el boton de restet
      exit.display(); 
+     player.play();
      
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse 
    
