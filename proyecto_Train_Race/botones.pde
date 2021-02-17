@@ -1,5 +1,5 @@
 class botones{ //crea los botones
- int x;//cetentro en x
+ int x;//centro en x
  int y; //centro en y
  int palabra;  //segun el numero es una palabra distinta (reset)--1 (unir)--2 
  //CONSTRUCTOR
@@ -11,7 +11,7 @@ class botones{ //crea los botones
   }
   
   void display(){
-    fill(int(random(0,256)));
+    fill(int(random(0,200)));
     ellipseMode(CENTER); //color blanco a 
     ellipse(x,y,80,40);  //todos los botones tienen el mismo tamaño y diferente posicion
     fill(0,0,0);    //color negro al texto

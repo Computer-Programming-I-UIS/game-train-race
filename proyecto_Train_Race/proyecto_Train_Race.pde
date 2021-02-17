@@ -1,7 +1,13 @@
-import processing.sound.*;
+/* Autores: Harvey Carreño - 2192281
+            Kenneth Rincón- 2192287
+   Juego: Alien Race
+   Descripción: Basado en el clásico juego de snake este código construye una versión  graficamente diferente y con algunas características extras. 
+Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
+*/
 
-SoundFile misonido;
-PImage startimage, startimage1;
+//import processing.sound.*;
+//SoundFile misonido;
+PImage startimage, startimage1, startimage2;
 PFont font;    //variable para añadir fuente
 int  stage = 0;
 int filas = 35; //30 visibles
@@ -14,7 +20,7 @@ PImage title;
 
 botones play = new botones(800,50,1); //Boton que reinicia las barras
 botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
-botones continuar = new botones(750,900,3); //Boton que une las lineas las barras con lineas
+botones continuar = new botones(750,200,3); //Boton que une las lineas las barras con lineas
 
 
 ArrayList<Integer> posX = new ArrayList<Integer> ();
@@ -29,6 +35,9 @@ int appleY;
 
 boolean gameOver = false;
 
+int screenWidth = 900;
+int screenHeight = 1000;
+
 // Declaración de todas las variables globales del juego 
 
 void setup() {
@@ -36,15 +45,10 @@ void setup() {
   size(900, 1000); // Tamaño de la pantalla
   startimage= loadImage("juego alien.jpg");
   startimage1= loadImage("loser.jpg");
-  misonido = new SoundFile(this,"final1.mp3");
+  startimage2= loadImage("continue.PNG");
+ // misonido = new SoundFile(this,"final1.mp3");
 
-  /*title = createFont( "font", 900,true);
-   
-   
-   font = loadFont("Cambria-Italic-48.vlw");  //cargamos la fuente a la variable
-   
-   textFont(font);  //definimos la fuente a usar
-   */  posX.add (10); // posición en la que va a iniciar en Xe Y
+  posX.add (10); // posición en la que va a iniciar en Xe Y
   posY.add (10);
   frameRate(8);
   appleX = (int)random(0, 25); // Posición de las manzanas aleatoria en X e Y
@@ -57,12 +61,12 @@ void draw() {
 
   switch(stage) {
   case 0 : 
-     misonido.play();
-    image(startimage, 0, 0, bits*40, height);
+    // misonido.play();
+    image(startimage, 0, 0, screenWidth, screenHeight);
      textAlign(CENTER);
      textSize(70);
      fill (int(random(50,200)));
-     stroke(25);
+     stroke(30);
      text("ALIEN RACE",350,height/3.5);
      textSize(25);
      fill (int(random(200,226)));
@@ -88,6 +92,7 @@ void draw() {
     break;
     case 1:
      background(155);
+     image(startimage2, 0, 0, screenWidth, screenHeight);
      continuar.display();
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse 
    
@@ -104,9 +109,9 @@ void draw() {
     textSize(30);
     text("Score: " + points, 80, 30, 1);
     if (gameOver == true) {
-      image(startimage1, 0, 0, bits*30, height);
+      image(startimage1, 0, 0, screenWidth, screenHeight);
       fill(#F5330C);
-      textSize(25);
+      textSize(30);
       text("Press space for PLAY AGAIN", random(500,800), random(800,1000));
       appleX= -2;
       appleY = -2;
