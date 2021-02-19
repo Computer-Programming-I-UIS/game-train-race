@@ -117,14 +117,14 @@ void draw() {
       fill(#F5330C);
       textSize(30);
       text("Press space for PLAY AGAIN", random(500,800), random(800,1000));
-     
+      player.play();
       appleX= -2;
       appleY = -2;
       posX.clear();
       posY.clear();
       posX.add(-10);
       posY.add(-10);
-      player.play();
+     
     } else {
       stroke(50);
       for (int i= 0; i < filas; i++) {    
