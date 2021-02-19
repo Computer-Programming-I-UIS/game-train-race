@@ -9,7 +9,7 @@ Minim minim;
 AudioPlayer player;
 AudioPlayer player1;
 
-PImage startimage, startimage1, startimage2;
+PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
 int  stage = 0;
 int filas = 35; //30 visibles
@@ -47,6 +47,7 @@ void setup() {
   startimage= loadImage("juego alien.jpg");
   startimage1= loadImage("loser.jpg");
   startimage2= loadImage("continue.PNG");
+  fondo= loadImage("fondo.jpg");
   minim = new Minim(this);
   player = minim.loadFile("final.wav");
   player1 = minim.loadFile("intro.wav");
@@ -107,8 +108,7 @@ void draw() {
    
     break;
   case 2 : 
-    
-    background(25);
+    image(fondo, 0, 0, screenWidth, screenHeight);
     ellipseMode(CORNER);
     textSize(30);
     text("Score: " + points, 80, 30, 1);
