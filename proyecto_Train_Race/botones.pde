@@ -21,14 +21,17 @@ class botones{ //crea los botones
       
       case 1:
       fill(#F72AB0);
+      textSize(15);
       text("Play",x,y);
       break;
       case 2:
       fill(#F72AB0);
+      textSize(15);
       text("Exit",x,y);
       break;
       case 3:
       fill(#D3C011);
+      textSize(15);
       stroke(15);
        text("Continue",x,y);
       
@@ -38,7 +41,7 @@ class botones{ //crea los botones
     
   }
   boolean ejecutar(){ //verifica que el boton este en el rango del boton
-  if(mouseX<=x+40 && mouseX>x-40 && mouseY>=y-20 && mouseY <= y + 2
+  if(mouseX<=x+80 && mouseX>x-80 && mouseY>=y-20 && mouseY <= y + 20
  ) return true;
   
   else return false;
