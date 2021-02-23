@@ -11,6 +11,10 @@
 
 ![](https://lh3.googleusercontent.com/TyIMU7ildrRRru0uzDUU7K5pHUYxabx_qUdXErA6tyn_zBEsY5UAbItzK50M7GTVRbmM9yY=s660)
 
+
+## Game play del juego.
+Para descargarla dejaré un tutorial dando click [Aquí](https://youtu.be/fcJMqu9h_bg "Aquí")
+
 ## Clasificación para edades
 
 ![](https://lh3.googleusercontent.com/-n3K0jAaeQokMQX8EsANlxgfhTuqzWY0h7kby9H01TomaxoerdpMAk4IfpDegWLAfyqS=s85)
