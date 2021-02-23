@@ -1,7 +1,8 @@
 
 # ALIEN RACE
 ## Autores:
-###Kenneth Rincón - código: 2192287
+
+### Kenneth Rincón - código: 2192287
 ### Harvey Carreño - código: 2192281
 
 
@@ -17,9 +18,9 @@
 
 Primero que todo se basa en una versión modificada del snake  el juego se basa en un nave espacial que se mueve con las teclas y se tienen dos opciones para jugarlo:
 >  1. arriba, abajo, izquierda o derecha.
-     2.  w,s,a,d respectivamente
+>  2.  w,s,a,d respectivamente
 
->  nuestra nave se moverá en dirección de esas flechas a uan velocidad constante que su objetivo será comerse un alien para crecer, y seguir en el juego, si la nave choca alguan parte de su cuerpo con ella, automáticamente oerderá igualmente si se estrella con las ventanas de la pantalla.
+**  nuestra nave se moverá en dirección de esas flechas a uan velocidad constante que su objetivo será comerse un alien para crecer, y seguir en el juego, si la nave choca alguan parte de su cuerpo con ella, automáticamente oerderá igualmente si se estrella con las ventanas de la pantalla.**
 
 ## Corta historia del juego:
  Una alien y su nave viajaban por el espacio, esquivando meteoros para visitar diferentes lugares del planeta,  luego de un día la nave pierde su alien, y emprende una busqueda para encontarlo para eso deberá atrapar a muchos hasta que identidique si alguno de esos es su alien, todo lo logrará moviéndose para no chocar con sus objetivos, y siendo muy escurridiza.
