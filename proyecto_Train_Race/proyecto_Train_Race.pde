@@ -4,38 +4,43 @@
    Descripción: Basado en el clásico juego de snake este código construye una versión  graficamente diferente y con algunas características extras. 
 Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
 */
+
+
+// Se importa la librería minim y se crean las variables para utilizarlas
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 AudioPlayer player1;
-
+// Se inicializan las variables de las imágenes para poder cargarlas en el draw
 PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
+// Inicializamos las variables de nuestro programa.
 int  stage = 0;
-int filas = 35; //30 visibles
-int columnas = 40; //22.5 visibles
+int filas = 35; //# de filas y columnas visibles para el fondo
+int columnas = 40; //
 int bits = 30;
 int points = 0; //variable de puntos
-//PImage title;
+
+// Definimos la clase de botones y los creamos.
 
 botones play = new botones(800,50,1); //Boton que reinicia las barras
 botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
 botones continuar = new botones(500,500,3); //Boton que une las lineas las barras con lineas
 
-
+// Se hace un array de vectors con las posiciones de nuestro alien
 
 ArrayList<Integer> posX = new ArrayList<Integer> ();
 ArrayList<Integer> posY = new ArrayList<Integer> ();
-
+// Se crean las variables dirección para usarlas en el movimiento
 int dire= 1;
 int[] dx = {0, 0, -1, 1};
 int[] dy = {-1, 1, 0, 0};
-
+// creo las variables de el alien(la comida).
 int appleX;
 int appleY;
-
+// Se hace un boolean para saber cuando se va  a matar la nave y cuando volver a empezar.
 boolean gameOver = false;
-
+// ancho y alto de nuestro fondo, para que las imágenes queden en el fondo completo
 int screenWidth = 900;
 int screenHeight = 1000;
 
@@ -59,6 +64,9 @@ void setup() {
 }
 // Termina la función setup.
 
+
+//Inicio de la función Draw donde se mostrará todo en pantalla ya que esto nos muestra
+// 60 fps. Cargó todas las imágenes y sonidos que inicialicé al principio
 void draw() {
   
 
@@ -68,7 +76,7 @@ void draw() {
     image(startimage, 0, 0, screenWidth, screenHeight);
      player1.play(); 
 
-     play.display();  // Muestra y Verifica si se esta presionando el boton de restet
+     play.display();  // Muestra y Verifica si se esta presionando el boton play
      exit.display(); 
      
      
@@ -112,15 +120,16 @@ void draw() {
       posY.clear();
       posX.add(-10);
       posY.add(-10);
-     
+     /*
     } else {
-      stroke(50);
+      
       for (int i= 0; i < filas; i++) {    
         line(0, i*bits, width, i*bits);
       }
       for (int j= 0; j < columnas; j++) { 
         line(j*bits, 0, j*bits, height);
       }
+      */
     }
     moove();
     comer();
