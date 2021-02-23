@@ -6,10 +6,10 @@
 ### Harvey Carreño - código: 2192281
 
 # Banner del juego. 
-< hecho por Harvey Carreño.
+### hecho por Harvey Carreño.
 
 
-![](https://lh3.googleusercontent.com/TyIMU7ildrRRru0uzDUU7K5pHUYxabx_qUdXErA6tyn_zBEsY5UAbItzK50M7GTVRbmM9yY=s136)
+![](https://lh3.googleusercontent.com/TyIMU7ildrRRru0uzDUU7K5pHUYxabx_qUdXErA6tyn_zBEsY5UAbItzK50M7GTVRbmM9yY=s660)
 
 ## Clasificación para edades
 
