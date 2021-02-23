@@ -13,7 +13,7 @@
 
 
 ## Game play del juego.
-Para descargarla dejaré un tutorial dando click [Aquí](https://youtu.be/fcJMqu9h_bg "Aquí")
+Para ver el gameplay dale click  [Aquí](https://youtu.be/fcJMqu9h_bg "Aquí")
 
 ## Clasificación para edades
 
