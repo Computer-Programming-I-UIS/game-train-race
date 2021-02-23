@@ -5,10 +5,11 @@
 ### Kenneth Rincón - código: 2192287
 ### Harvey Carreño - código: 2192281
 
+# Banner del juego. 
+< hecho por Harvey Carreño.
 
 
-![](https://www.pngitem.com/pimgs/m/81-816220_transparent-nave-png-imagenes-de-naves-espaciales-animados.png)
-
+![](https://lh3.googleusercontent.com/TyIMU7ildrRRru0uzDUU7K5pHUYxabx_qUdXErA6tyn_zBEsY5UAbItzK50M7GTVRbmM9yY=s136)
 
 ## Clasificación para edades
 
