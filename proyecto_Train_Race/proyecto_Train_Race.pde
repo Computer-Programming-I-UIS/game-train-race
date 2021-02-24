@@ -5,12 +5,12 @@
 Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
 */
 
-
 // Se importa la librería minim y se crean las variables para utilizarlas
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 AudioPlayer player1;
+AudioPlayer song;
 // Se inicializan las variables de las imágenes para poder cargarlas en el draw
 PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
@@ -54,7 +54,8 @@ void setup() {
   fondo= loadImage("fondo.jpg");
   minim = new Minim(this);
   player = minim.loadFile("final.wav");
-  player1 = minim.loadFile("intro.wav");
+  player1 = minim.loadFile("inic.wav");
+  song = minim.loadFile("electrified.wav");
   posX.add (10); // posición en la que va a iniciar en X e Y
   posY.add (10);
   frameRate(8);
@@ -78,7 +79,7 @@ void draw() {
      
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse    
      if(play.ejecutar()){       //Si hace click en reset             
-            stage = 1;            
+            stage = 1;
        }
      if(exit.ejecutar()){       //Si hace click en reset 
             exit();            
@@ -95,6 +96,7 @@ void draw() {
    
     if(continuar.ejecutar()){       //Si hace click en reset 
             stage = 2;
+            player1.close();
      }
     }
    
@@ -104,25 +106,27 @@ void draw() {
     ellipseMode(CORNER);
     textSize(36);
     text("Score: " + points, 90, 24, 1);
-    if (gameOver == true) {
-      image(startimage1, 0, 0, screenWidth, screenHeight);
-      player.play();
-      appleX= -2;
-      appleY = -2;
-      posX.clear();
-      posY.clear();
-      posX.add(-10);
-      posY.add(-10);
+    song.play(); 
+      if (gameOver == true) {
+        image(startimage1, 0, 0, screenWidth, screenHeight);
+        song.close();
+        player.play();
+        appleX= -2;
+        appleY = -2;
+        posX.clear();
+        posY.clear();
+        posX.add(-10);
+        posY.add(-10);
    
     } else {
       
       for (int i= 2; i < filas; i++) {    
-        fill(175, 69, 252);
+        fill(57, 5, 95);
         rect(0, 60, 900, 30);
         rect(0, 630, 900, 30);
       }
       for (int j= 0; j < columnas; j++) { 
-        fill(175, 69, 252);
+        fill(57, 5, 95);
         rect(0, 60, 30, 600);
         rect(870, 60, 30, 600);
       }
@@ -138,10 +142,7 @@ void draw() {
     
     break;
     case 3:
-    
-    
-    
-    
+        
     break;
   }
 }

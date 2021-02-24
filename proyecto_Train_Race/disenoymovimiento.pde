@@ -77,7 +77,7 @@
     appleX = (int)random(2, 28); 
     appleY = (int)random(4, 20);
     points = 0;
-    
+        
     }
 
    void keyPressed(){
@@ -87,6 +87,8 @@
      if (key == 'd' ||keyCode == RIGHT) dire = 3;
       if ( key == ' '){
        restaurar();
+       player.close();
+       
       } 
       if ( key == 'p'||key == 'P'){
         stage = 3;
