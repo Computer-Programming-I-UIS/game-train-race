@@ -8,7 +8,7 @@
    
    void bordes(){
      
-     if ((posX.get(0) < 0) || ( posX.get(0) > columnas -1) || (posY.get(0) < 0) || ( posY.get(0) > filas-1)){         
+     if ((posX.get(0) < 2) || ( posX.get(0) > columnas -3) || (posY.get(0) < 4) || ( posY.get(0) > filas-3)){         
           gameOver = true ; 
       }
      
@@ -49,8 +49,8 @@
  
    void comer(){
          if(( posX.get(0) == appleX) && ( posY.get(0) == appleY)){
-             appleX = (int)random(0, 25); 
-             appleY = (int)random(0, 20);
+             appleX = (int)random(2, 28); 
+             appleY = (int)random(4, 20);
              posX.add(posX.get(posX.size()-1));
              posY.add(posY.get(posY.size()-1));
              points = points+10;        
@@ -74,8 +74,8 @@
     posY.clear();
     posX.add(10);
     posY.add(10);
-    appleX = (int)random(0, 25); 
-    appleY = (int)random(0, 25);
+    appleX = (int)random(2, 28); 
+    appleY = (int)random(4, 20);
     points = 0;
     
     }

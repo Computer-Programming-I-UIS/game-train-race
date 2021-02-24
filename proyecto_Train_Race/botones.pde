@@ -11,7 +11,7 @@ class botones{ //crea los botones
   }
   
   void display(){
-    fill(int(random(50,200)));
+    fill(int(random(80,200)));
     ellipseMode(CENTER); //color blanco a 
     ellipse(x,y,80,40);  //todos los botones tienen el mismo tamaño y diferente posicion
     fill(0,0,0);    //color negro al texto

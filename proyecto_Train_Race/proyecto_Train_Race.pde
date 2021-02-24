@@ -16,8 +16,8 @@ PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
 // Inicializamos las variables de nuestro programa.
 int  stage = 0;
-int filas = 35; //# de filas y columnas visibles para el fondo
-int columnas = 40; //
+int filas = 22; //# de filas y columnas visibles para el fondo
+int columnas = 30; //
 int bits = 30;
 int points = 0; //variable de puntos
 
@@ -25,10 +25,9 @@ int points = 0; //variable de puntos
 
 botones play = new botones(800,50,1); //Boton que reinicia las barras
 botones exit = new botones(800,150,2); //Boton que une las lineas las barras con lineas
-botones continuar = new botones(500,500,3); //Boton que une las lineas las barras con lineas
+botones continuar = new botones(500,300,3); //Boton que une las lineas las barras con lineas
 
 // Se hace un array de vectors con las posiciones de nuestro alien
-
 ArrayList<Integer> posX = new ArrayList<Integer> ();
 ArrayList<Integer> posY = new ArrayList<Integer> ();
 // Se crean las variables dirección para usarlas en el movimiento
@@ -42,13 +41,13 @@ int appleY;
 boolean gameOver = false;
 // ancho y alto de nuestro fondo, para que las imágenes queden en el fondo completo
 int screenWidth = 900;
-int screenHeight = 1000;
+int screenHeight = 660;
 
 // Declaración de todas las variables globales del juego 
 
 void setup() {
 
-  size(900, 1000); // Tamaño de la pantalla
+  size(900, 660); // Tamaño de la pantalla
   startimage= loadImage("ALIEN.jpg");
   startimage1= loadImage("GAME OVER.jpg");
   startimage2= loadImage("continue.PNG");
@@ -56,45 +55,39 @@ void setup() {
   minim = new Minim(this);
   player = minim.loadFile("final.wav");
   player1 = minim.loadFile("intro.wav");
-  posX.add (10); // posición en la que va a iniciar en Xe Y
+  posX.add (10); // posición en la que va a iniciar en X e Y
   posY.add (10);
   frameRate(8);
-  appleX = (int)random(0, 25); // Posición de las manzanas aleatoria en X e Y
-  appleY = (int)random(0, 20);
+  appleX = (int)random(2, 28); // Posición de las manzanas aleatoria en X e Y
+  appleY = (int)random(4, 20);
 }
 // Termina la función setup.
 
 
 //Inicio de la función Draw donde se mostrará todo en pantalla ya que esto nos muestra
 // 60 fps. Cargó todas las imágenes y sonidos que inicialicé al principio
-void draw() {
-  
+void draw() {  
 
   switch(stage) {
   case 0 : 
     
     image(startimage, 0, 0, screenWidth, screenHeight);
      player1.play(); 
-
      play.display();  // Muestra y Verifica si se esta presionando el boton play
-     exit.display(); 
+     exit.display();      
      
-     
-    if(mousePressed){   //Solo modificara las barras cuando presionen el mouse 
-   
-    if(play.ejecutar()){       //Si hace click en reset 
-            
-            stage = 1;
-            
-    }
-    if(exit.ejecutar()){       //Si hace click en reset 
-            exit();
-            
-    }
+    if(mousePressed){   //Solo modificara las barras cuando presionen el mouse    
+     if(play.ejecutar()){       //Si hace click en reset             
+            stage = 1;            
+       }
+     if(exit.ejecutar()){       //Si hace click en reset 
+            exit();            
+       }
 
      }
     break;
-    case 1:
+    
+  case 1:
      background(155);
      image(startimage2, 0, 0, screenWidth, screenHeight);
      continuar.display();
@@ -102,15 +95,15 @@ void draw() {
    
     if(continuar.ejecutar()){       //Si hace click en reset 
             stage = 2;
-    }
+     }
     }
    
     break;
   case 2 : 
     image(fondo, 0, 0, screenWidth, screenHeight);
     ellipseMode(CORNER);
-    textSize(30);
-    text("Score: " + points, 80, 30, 1);
+    textSize(36);
+    text("Score: " + points, 90, 24, 1);
     if (gameOver == true) {
       image(startimage1, 0, 0, screenWidth, screenHeight);
       player.play();
@@ -120,16 +113,20 @@ void draw() {
       posY.clear();
       posX.add(-10);
       posY.add(-10);
-     /*
+   
     } else {
       
-      for (int i= 0; i < filas; i++) {    
-        line(0, i*bits, width, i*bits);
+      for (int i= 2; i < filas; i++) {    
+        fill(175, 69, 252);
+        rect(0, 60, 900, 30);
+        rect(0, 630, 900, 30);
       }
       for (int j= 0; j < columnas; j++) { 
-        line(j*bits, 0, j*bits, height);
+        fill(175, 69, 252);
+        rect(0, 60, 30, 600);
+        rect(870, 60, 30, 600);
       }
-      */
+      
     }
     moove();
     comer();
