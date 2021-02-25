@@ -10,7 +10,8 @@ import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 AudioPlayer player1;
-AudioPlayer song;
+//AudioPlayer end;
+AudioPlayer game;
 // Se inicializan las variables de las imágenes para poder cargarlas en el draw
 PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
@@ -53,8 +54,10 @@ void setup() {
   startimage2= loadImage("continue.PNG");
   fondo= loadImage("fondo.jpg");
   minim = new Minim(this);
-  player = minim.loadFile("gameover.wav");
-  player1 = minim.loadFile("inic.wav");
+  player1 = minim.loadFile("ini.wav");
+  game = minim.loadFile("game.wav");
+  player = minim.loadFile("over.wav");
+  //end = minim.loadFile("end.wav");
   posX.add (10); // posición en la que va a iniciar en X e Y
   posY.add (10);
   frameRate(7);
@@ -105,9 +108,10 @@ void draw() {
     ellipseMode(CORNER);
     textSize(36);
     text("Score: " + points, 90, 24, 1);
-
+    game.play();
       if (gameOver == true) {
         image(startimage1, 0, 0, screenWidth, screenHeight);
+        game.close();
         player.play();
         appleX= -2;
         appleY = -2;
@@ -134,6 +138,7 @@ void draw() {
     cuerpo();
     drawTrain();
     drawApple();
+    //end.play();
     keyPressed();
     
     break;
