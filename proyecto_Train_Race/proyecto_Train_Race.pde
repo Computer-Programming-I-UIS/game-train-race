@@ -53,12 +53,11 @@ void setup() {
   startimage2= loadImage("continue.PNG");
   fondo= loadImage("fondo.jpg");
   minim = new Minim(this);
-  player = minim.loadFile("final.wav");
+  player = minim.loadFile("gameover.wav");
   player1 = minim.loadFile("inic.wav");
-  song = minim.loadFile("electrified.wav");
   posX.add (10); // posición en la que va a iniciar en X e Y
   posY.add (10);
-  frameRate(8);
+  frameRate(7);
   appleX = (int)random(2, 28); // Posición de las manzanas aleatoria en X e Y
   appleY = (int)random(4, 20);
 }
@@ -67,11 +66,11 @@ void setup() {
 
 //Inicio de la función Draw donde se mostrará todo en pantalla ya que esto nos muestra
 // 60 fps. Cargó todas las imágenes y sonidos que inicialicé al principio
+
 void draw() {  
 
   switch(stage) {
-  case 0 : 
-    
+  case 0 :  
     image(startimage, 0, 0, screenWidth, screenHeight);
      player1.play(); 
      play.display();  // Muestra y Verifica si se esta presionando el boton play
@@ -106,10 +105,9 @@ void draw() {
     ellipseMode(CORNER);
     textSize(36);
     text("Score: " + points, 90, 24, 1);
-    song.play(); 
+
       if (gameOver == true) {
         image(startimage1, 0, 0, screenWidth, screenHeight);
-        song.close();
         player.play();
         appleX= -2;
         appleY = -2;
@@ -117,21 +115,19 @@ void draw() {
         posY.clear();
         posX.add(-10);
         posY.add(-10);
-   
     } else {
       
       for (int i= 2; i < filas; i++) {    
         fill(57, 5, 95);
         rect(0, 60, 900, 30);
         rect(0, 630, 900, 30);
-      }
+        }
       for (int j= 0; j < columnas; j++) { 
         fill(57, 5, 95);
         rect(0, 60, 30, 600);
         rect(870, 60, 30, 600);
+        }
       }
-      
-    }
     moove();
     comer();
     bordes();
@@ -142,7 +138,7 @@ void draw() {
     
     break;
     case 3:
-        
+        stage = 0;
     break;
   }
 }

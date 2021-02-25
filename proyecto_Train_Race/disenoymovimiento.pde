@@ -6,14 +6,6 @@
    
     }
    
-   void bordes(){
-     
-     if ((posX.get(0) < 2) || ( posX.get(0) > columnas -3) || (posY.get(0) < 4) || ( posY.get(0) > filas-3)){         
-          gameOver = true ; 
-      }
-     
-    }
-   
    void cuerpo(){
      
      for (int i = 2; i < posX.size(); i++){
@@ -25,28 +17,15 @@
       }
       
     }
-   
-   void drawTrain(){
-      for (int i = 0; i< posX.size(); i ++){
-    fill(random(50, 200));    
-         ellipse(posX.get(i)*bits, posY.get(i)*bits, 33, 33);
-    fill(237, 247, 240);
-         ellipse(posX.get(i)*bits+(33/4), posY.get(i)*bits+(33/4), 16, 16);
-    fill (random(50, 255), 0,random(50, 255));
-         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+4, 8, 8);
-         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+22, 8, 8);
-         ellipse(posX.get(i)*bits+22, posY.get(i)*bits+4, 8, 8);
-         ellipse(posX.get(i)*bits+22, posY.get(i)*bits+22, 8, 8);
-    fill (0,random(50, 255), random(50, 255));
-         ellipse(posX.get(i)*bits+(25/2), posY.get(i)*bits, 8, 8);
-         ellipse(posX.get(i)*bits+(25/2), posY.get(i)*bits+24, 8, 8);
-         ellipse(posX.get(i)*bits, posY.get(i)*bits+(25/2), 8, 8);
-         ellipse(posX.get(i)*bits+24, posY.get(i)*bits+(25/2), 8, 8);
     
-        }
-        
+    void bordes(){
+     
+     if ((posX.get(0) < 2) || ( posX.get(0) > columnas -3) || (posY.get(0) < 4) || ( posY.get(0) > filas-3)){         
+          gameOver = true ; 
+      }
+     
     }
- 
+      
    void comer(){
          if(( posX.get(0) == appleX) && ( posY.get(0) == appleY)){
              appleX = (int)random(2, 28); 
@@ -57,6 +36,27 @@
           }
    
     }
+    
+    void drawTrain(){
+      for (int i = 0; i< posX.size(); i ++){
+    fill(random(50, 200));    
+         ellipse(posX.get(i)*bits, posY.get(i)*bits, bits, bits);
+    fill(237, 247, 240);
+         ellipse(posX.get(i)*bits+(30/4), posY.get(i)*bits+(30/4), bits/2, bits/2);
+    fill (random(50, 255), 0,random(50, 255));
+         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+3, bits/4, bits/4);
+         ellipse(posX.get(i)*bits+4, posY.get(i)*bits+21, bits/4, bits/4);
+         ellipse(posX.get(i)*bits+21, posY.get(i)*bits+4, bits/4, bits/4);
+         ellipse(posX.get(i)*bits+20, posY.get(i)*bits+20, bits/4, bits/4);
+    fill (0,random(50, 255), random(50, 255));
+         ellipse(posX.get(i)*bits+12, posY.get(i)*bits, bits/4, bits/4);
+         ellipse(posX.get(i)*bits+12, posY.get(i)*bits+23, bits/4, bits/4);
+         ellipse(posX.get(i)*bits, posY.get(i)*bits+(25/2), bits/4, bits/4);
+         ellipse(posX.get(i)*bits+23, posY.get(i)*bits+(25/2), bits/4, bits/4);
+    
+        }
+        
+    } 
    
    void drawApple(){
     fill(75, 252 , 86);
@@ -77,6 +77,7 @@
     appleX = (int)random(2, 28); 
     appleY = (int)random(4, 20);
     points = 0;
+    player.play();
         
     }
 

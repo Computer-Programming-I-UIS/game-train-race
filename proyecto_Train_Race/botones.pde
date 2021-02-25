@@ -41,7 +41,7 @@ class botones{ //crea los botones
     
   }
   boolean ejecutar(){ //verifica que el boton este en el rango del boton
-  if(mouseX<=x+80 && mouseX>x-80 && mouseY>=y-20 && mouseY <= y + 20
+  if(mouseX<=x+90 && mouseX>x-90 && mouseY>=y-30 && mouseY <= y + 30
  ) return true;
   
   else return false;
