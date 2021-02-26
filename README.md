@@ -13,7 +13,7 @@
 
 
 ## Game play del juego.
-Para ver el gameplay dale click  [Aquí](https://youtu.be/fcJMqu9h_bg "Aquí")
+Para ver el gameplay dale click  [Aquí](https://youtu.be/Yl1UT0i7ojI"Aquí")
 
 ## Clasificación para edades
 
@@ -66,4 +66,4 @@ y por último estará el game over que  va aparecer al momento de perder.
 A las librerias por dejarnos usar su material, tanto de imagen como de sonido.
 ## Créditos :
 Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
-
+y A esta página  por prestarnos los sonidos, pueden descargarlos y verlos dando click  [Aquí](https://freesound.org/"Aquí")
