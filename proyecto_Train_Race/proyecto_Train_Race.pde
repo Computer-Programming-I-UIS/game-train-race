@@ -5,12 +5,13 @@
 Creditos al canal de youtube "Air Room" ya que con ayuda de su contenido pudimos recopilar información y funciones que posteriormente usamos en el juego.
 */
 
-
 // Se importa la librería minim y se crean las variables para utilizarlas
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
 AudioPlayer player1;
+//AudioPlayer end;
+AudioPlayer game;
 // Se inicializan las variables de las imágenes para poder cargarlas en el draw
 PImage startimage, startimage1, startimage2, fondo;
 PFont font;    //variable para añadir fuente
@@ -53,11 +54,13 @@ void setup() {
   startimage2= loadImage("continue.PNG");
   fondo= loadImage("fondo.jpg");
   minim = new Minim(this);
-  player = minim.loadFile("final.wav");
-  player1 = minim.loadFile("intro.wav");
+  player1 = minim.loadFile("ini.wav");
+  game = minim.loadFile("game.wav");
+  player = minim.loadFile("over.wav");
+  //end = minim.loadFile("end.wav");
   posX.add (10); // posición en la que va a iniciar en X e Y
   posY.add (10);
-  frameRate(8);
+  frameRate(7);
   appleX = (int)random(2, 28); // Posición de las manzanas aleatoria en X e Y
   appleY = (int)random(4, 20);
 }
@@ -66,11 +69,11 @@ void setup() {
 
 //Inicio de la función Draw donde se mostrará todo en pantalla ya que esto nos muestra
 // 60 fps. Cargó todas las imágenes y sonidos que inicialicé al principio
+
 void draw() {  
 
   switch(stage) {
-  case 0 : 
-    
+  case 0 :  
     image(startimage, 0, 0, screenWidth, screenHeight);
      player1.play(); 
      play.display();  // Muestra y Verifica si se esta presionando el boton play
@@ -78,7 +81,7 @@ void draw() {
      
     if(mousePressed){   //Solo modificara las barras cuando presionen el mouse    
      if(play.ejecutar()){       //Si hace click en reset             
-            stage = 1;            
+            stage = 1;
        }
      if(exit.ejecutar()){       //Si hace click en reset 
             exit();            
@@ -95,6 +98,7 @@ void draw() {
    
     if(continuar.ejecutar()){       //Si hace click en reset 
             stage = 2;
+            player1.close();
      }
     }
    
@@ -104,19 +108,21 @@ void draw() {
     ellipseMode(CORNER);
     textSize(36);
     text("Score: " + points, 90, 24, 1);
-    if (gameOver == true) {
-      image(startimage1, 0, 0, screenWidth, screenHeight);
-      player.play();
-      appleX= -2;
-      appleY = -2;
-      posX.clear();
-      posY.clear();
-      posX.add(-10);
-      posY.add(-10);
-   
+    game.play();
+      if (gameOver == true) {
+        image(startimage1, 0, 0, screenWidth, screenHeight);
+        game.close();
+        player.play();
+        appleX= -2;
+        appleY = -2;
+        posX.clear();
+        posY.clear();
+        posX.add(-10);
+        posY.add(-10);
     } else {
       
       for (int i= 2; i < filas; i++) {    
+
         fill(175, 69, 252);
        // rect(0, 60, 900, 30);
        // rect(0, 630, 900, 30);
@@ -125,23 +131,30 @@ void draw() {
         fill(175, 69, 252);
        // rect(0, 60, 30, 600);
        // rect(870, 60, 30, 600);
+
+        fill(57, 5, 95);
+        rect(0, 60, 900, 30);
+        rect(0, 630, 900, 30);
+        }
+      for (int j= 0; j < columnas; j++) { 
+        fill(57, 5, 95);
+        rect(0, 60, 30, 600);
+        rect(870, 60, 30, 600);
+        }
+
       }
-      
-    }
     moove();
     comer();
     bordes();
     cuerpo();
     drawTrain();
     drawApple();
+    //end.play();
     keyPressed();
     
     break;
     case 3:
-    
-    
-    
-    
+        stage = 0;
     break;
   }
 }
