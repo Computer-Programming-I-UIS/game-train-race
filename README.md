@@ -9,7 +9,7 @@
 ### hecho por Harvey Carreño.
 
 
-![](https://lh3.googleusercontent.com/TyIMU7ildrRRru0uzDUU7K5pHUYxabx_qUdXErA6tyn_zBEsY5UAbItzK50M7GTVRbmM9yY=s660)
+![](https://lh3.googleusercontent.com/A3ULXGGC3usjyErhydkb-XJpO0N-wGfykYdl4cu3dJZ2hE0r8fW17joL_awFRjRioklI=s660)
 
 
 ## Game play del juego.
