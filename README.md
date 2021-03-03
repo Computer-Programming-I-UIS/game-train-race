@@ -39,24 +39,23 @@ Para descargarla dejaré un tutorial dando click [Aquí](https://www.youtube.com
 ## Características del juego :
 Primero se encontrará con el menú de opciones que se recrea con el nombre del juego y un fondo para imaginar de que lugar se está hablando.
 
-
 ![](https://lh3.googleusercontent.com/mfxqPeU6_2g_4rwPNzCvWxvHyYA5QWDtrzYyYDl4vFJp3goFtgV5MYAQw63wcy99IL4f458=s622)
+
 
 
 
 Despues de pasar el menú  se encontrará con las instrucciones del juego  para aprender a jugarlo y se darán indicaciones de que se debe hacer para ganar .
 
-
 ![](https://lh3.googleusercontent.com/k3RYbqvJfwz8K0Vu9r7jCbpCyfnidHIHC_TxHnq2HgvrcTvxnnWIKXqk74mEvW0iXXMORw=s500)
+
 
 
 Aquí tenemos una breve imágen de lo que es el juego 
 
+
 ![](https://lh3.googleusercontent.com/qFcIiQhW1MZKXqh5FPdi9CbuWXiigFQn981ofAnNc_xpRuBE97f7qm94txshOBQS2C8Skw=s660)
 
-
 y por último estará el game over que  va aparecer al momento de perder.
-
 
 ![](https://lh3.googleusercontent.com/vXpfJj1fdGqVVTl4Z-APyuwgjc3xC0RQ7mLvhQLKJ-Eh8uAu_oDHplTXwRfYF4G4RJ9Kxw=s600)
 
