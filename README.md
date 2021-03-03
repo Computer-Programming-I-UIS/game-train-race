@@ -51,8 +51,7 @@ Despues de pasar el menú  se encontrará con las instrucciones del juego  para 
 Aquí tenemos una breve imágen de lo que es el juego 
 
 
-![](https://lh3.googleusercontent.com/LWFzQ3Uu26cO4P10L5-jaaYMYucgEeuCT3qb-f3lIg7UWs19rGlcJ7el-419s9FdC_kv7Q=s600)
-
+![](https://lh3.googleusercontent.com/i1jomUrE66s1shZKMct6EYFNE7_d_9pm0bOJSz-6RiSslfWdH-B_yWebp2ZhbLTrNnTh1Q=s600)
 y por último estará el game over que  va aparecer al momento de perder.
 
 ![](https://lh3.googleusercontent.com/GRS-E8tn4ZOwOdbo9dql0JTYlH3qZvaLJ65uKRLl47jGwBaC5oiQoaJcu_KTnbu-ukdlLA=s660)
