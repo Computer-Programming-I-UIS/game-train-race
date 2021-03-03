@@ -17,8 +17,7 @@ Para ver el gameplay dale click  [Aquí](https://youtu.be/Yl1UT0i7ojI"Aquí")
 
 ## Clasificación para edades
 
-![](https://lh3.googleusercontent.com/-n3K0jAaeQokMQX8EsANlxgfhTuqzWY0h7kby9H01TomaxoerdpMAk4IfpDegWLAfyqS=s100)
-
+![](https://lh3.googleusercontent.com/QqCWdlyYCJXOauefDP8vzDRzmOz-KpDA5gzJwtkCwv_yKmLTPfzFZE8PAoBTgrNxt-TUfQ=s100)
 ## Descripción del juego :
 
 Primero que todo se basa en una versión modificada del snake  el juego se basa en un nave espacial que se mueve con las teclas y se tienen dos opciones para jugarlo:
