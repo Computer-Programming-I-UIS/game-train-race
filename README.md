@@ -17,7 +17,7 @@ Para ver el gameplay dale click  [Aquí](https://youtu.be/Yl1UT0i7ojI"Aquí")
 
 ## Clasificación para edades
 
-![](https://lh3.googleusercontent.com/-n3K0jAaeQokMQX8EsANlxgfhTuqzWY0h7kby9H01TomaxoerdpMAk4IfpDegWLAfyqS=s85)
+![](https://lh3.googleusercontent.com/-n3K0jAaeQokMQX8EsANlxgfhTuqzWY0h7kby9H01TomaxoerdpMAk4IfpDegWLAfyqS=s100)
 
 ## Descripción del juego :
 
@@ -39,25 +39,24 @@ Para descargarla dejaré un tutorial dando click [Aquí](https://www.youtube.com
 ## Características del juego :
 Primero se encontrará con el menú de opciones que se recrea con el nombre del juego y un fondo para imaginar de que lugar se está hablando.
 
-![](https://lh3.googleusercontent.com/mfxqPeU6_2g_4rwPNzCvWxvHyYA5QWDtrzYyYDl4vFJp3goFtgV5MYAQw63wcy99IL4f458=s622)
-
+![](https://lh3.googleusercontent.com/QwEPWxAtobXH1ITupSKwSUqnSVWUKFrrSmBVMa41kZQprz7MY5bTrbMfalnJ4u5pIz7N=s660)
 
 
 
 Despues de pasar el menú  se encontrará con las instrucciones del juego  para aprender a jugarlo y se darán indicaciones de que se debe hacer para ganar .
 
-![](https://lh3.googleusercontent.com/k3RYbqvJfwz8K0Vu9r7jCbpCyfnidHIHC_TxHnq2HgvrcTvxnnWIKXqk74mEvW0iXXMORw=s500)
+![](https://lh3.googleusercontent.com/h4aogryzwRACJs5ZPd9uampaQ8OkuBdtBPujA7Avk4-pgYr3lk_0X9Tqf3F_XyuBXBXaYV4=s660)
 
 
 
 Aquí tenemos una breve imágen de lo que es el juego 
 
 
-![](https://lh3.googleusercontent.com/qFcIiQhW1MZKXqh5FPdi9CbuWXiigFQn981ofAnNc_xpRuBE97f7qm94txshOBQS2C8Skw=s660)
+![](https://lh3.googleusercontent.com/LWFzQ3Uu26cO4P10L5-jaaYMYucgEeuCT3qb-f3lIg7UWs19rGlcJ7el-419s9FdC_kv7Q=s600)
 
 y por último estará el game over que  va aparecer al momento de perder.
 
-![](https://lh3.googleusercontent.com/vXpfJj1fdGqVVTl4Z-APyuwgjc3xC0RQ7mLvhQLKJ-Eh8uAu_oDHplTXwRfYF4G4RJ9Kxw=s600)
+![](https://lh3.googleusercontent.com/GRS-E8tn4ZOwOdbo9dql0JTYlH3qZvaLJ65uKRLl47jGwBaC5oiQoaJcu_KTnbu-ukdlLA=s660)
 
 
 ## **Agradecimientos:**
